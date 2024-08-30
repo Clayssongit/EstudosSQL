@@ -1,0 +1,14 @@
+CREATE TABLE if not exists editora(
+    cod_editora int PRIMARY KEY not null,
+    nome varchar (40) not null,
+    cidade varchar (50) not null,
+    tel_contato char (10) -- com DDD
+);
+INSERT INTO editora (cod_editora, nome, cidade, tel_contato)
+    VALUES
+        (11005, 'Saraiva', 'São Paulo', 1130901010),
+        (61001, 'Eras', 'Brasília', 6134201818),
+        (41001, 'Summer', 'Curitiba', 4132994040),
+        (11004, 'Pontos', 'São Paulo', 1154201966),
+        (21001, 'Marks', 'Rio de Janeiro', 2159001010),
+        (11003, 'Grupo A', 'São Paulo', 1135669865),
