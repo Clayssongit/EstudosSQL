@@ -12,3 +12,8 @@ INSERT INTO editora (cod_editora, nome, cidade, tel_contato)
         (11004, 'Pontos', 'São Paulo', 1154201966),
         (21001, 'Marks', 'Rio de Janeiro', 2159001010),
         (11003, 'Grupo A', 'São Paulo', 1135669865),
+        (21002, 'Ciência Moderna', 'Rio de Janeiro', 2142002478),
+        (11002, 'Ciêntífica', 'São Paulo', 1137201415),
+        (11001, 'Planeta', 'São Paulo', 1155441881);
+        
+SELECT * FROM editora ORDER BY cod_editora;
