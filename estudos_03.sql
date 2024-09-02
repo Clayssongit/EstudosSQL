@@ -1,3 +1,4 @@
+USE estudos_sql;
 CREATE TABLE if not exists editora(
     cod_editora int PRIMARY KEY not null,
     nome varchar (40) not null,
