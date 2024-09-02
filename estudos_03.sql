@@ -17,3 +17,11 @@ INSERT INTO editora (cod_editora, nome, cidade, tel_contato)
         (11001, 'Planeta', 'São Paulo', 1155441881);
         
 SELECT * FROM editora ORDER BY cod_editora;
+
+CREATE TABLE if not exists autor(
+    cod_autor int PRIMARY KEY not null,
+    nome varchar (40) not null,
+    nacionalidade varchar (20) not null,
+    dt_nascimento date
+);
+INSERT INTO autor (nome, nascionalidade, )
