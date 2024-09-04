@@ -54,3 +54,25 @@ INSERT INTO genero
         (106, 'Poesia', 10);
 USE estudos_03;
 SELECT * FROM genero ORDER BY genero;
+
+USE estudos_03;
+CREATE TABLE if not exists usuario(
+    CPF_usuario char (11) not null,
+    nome varchar (50) not null,
+    telefone char (8) not null,
+    dt_cadastro date,
+    dt_nascimento date not null,
+    PRIMARY KEY (CPF_usuario)
+);
+INSERT INTO usuario (CPF_usuario, nome, telefone, dt_cadastro, dt_nascimento)
+    VALUES
+        ('12345678901', 'Ana Silva', 98765432, '2018-09-19', '2003-10-17'),
+        ('23456789012', 'Carlos Pereira', 87654321, '2020-06-12', '1998-01-24'),
+        ('34567890123', 'Daniela Costa', 76543210, '2021-09-01', '1987-04-09'),
+        ('45678901234', 'Eduardo Santos', 65432109, '2017-07-13', '1999-01-01'),
+        ('56789012345', 'Fernanda Almeida', 54321098, '2018-03-02', '2001-04-09'),
+        ('67890123456', 'Gabriel Souza', 43210987, '2020-02-07', '2000-08-19'),
+        ('78901234567', 'Helena Martins', 32109876, '2015-10-12', '1997-10-02'),
+        ('89012345678', 'Igor Fernandes', 21098765, '2017-03-09', '1993-03-11'),
+        ('90123456789', 'Bruno Oliveira', 10987654, '2019-02-23', '2004-09-10');
+SELECT * FROM usuario ORDER BY CPF_usuario;
