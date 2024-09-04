@@ -76,3 +76,28 @@ INSERT INTO usuario (CPF_usuario, nome, telefone, dt_cadastro, dt_nascimento)
         ('89012345678', 'Igor Fernandes', 21098765, '2017-03-09', '1993-03-11'),
         ('90123456789', 'Bruno Oliveira', 10987654, '2019-02-23', '2004-09-10');
 SELECT * FROM usuario ORDER BY CPF_usuario;
+
+USE estudos_03;
+CREATE TABLE if not exists funcionario(
+    CPF_funcionario char (11) not null,
+    nome varchar (40) not null,
+    cidade varchar (50) not null,
+    telefone char (8) not null,
+    salario decimal (7,2) not null,
+    funcao varchar (30),
+    dt_admissao date,
+    dt_nascimento date,
+    PRIMARY key (CPF_funcionario)
+);
+INSERT INTO funcionario (CPF_funcionario, nome, cidade, telefone, salario, funcao, dt_admissao, dt_nacimento)
+    VALUES
+        ('90123456789', 'Lucas Almeida', 'Campinas', 90123456, 1200.54, 'Auxiliar', '2018-03-12', '1985-09-18'),
+        ('01234567890', 'Mariana Silva', 'São Paulo', 01234567, 4899.00, 'Recepicionista2', '2019-02-23', '1989-09-01'),
+        ('11234567890', 'Rafael Costa', 'São paulo', 11234567, 3600.00, 'Recepicionista1', '2018-05-09', '1999-02-05'),
+        ('21234567890', 'Beatriz Oliveira', 'Rio de Janeiro', 21234567, 6000.50, 'Bibliotecaria', '2018-01-09', '2000-05-19'),
+        ('31234567890', 'Gabriel Santos', 'Ceará', 31234567, 4800.00, 'Segurança', '2020-01-15', '1996-06-10'),
+        ('41234567890', 'Ana Pereira', 'Campinas', 41234567, 7500.00, 'Bibliotecaria chefe', '2020-01-15', '1993-07-04'),
+        ('51234567890', 'João Fernandes', 'São paulo', 51234567, 4000.00, 'Auxiliar geral', '2018-05-15', '1992-05-01'),
+        ('61234567890', 'Larissa Rodrigues', 'Rio de Janeiro', 61234567, 9500.50, 'Gerente', '2016-09-12', '1994-06-19');
+SELECT * FROM funcionario ORDER BY CPF_funcionario;
+      
